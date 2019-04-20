@@ -1,6 +1,6 @@
 {
   "name": "passwordless",
-  "homepage": "http://josemore.github.io/passwordless",
+  "homepage": "https://josemore.github.io/passwordless/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
