@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { makeCredential, storeCredential, getAssertion, getCredential } from './lib/creds.mgmt';
 
 class App extends Component {
 
@@ -30,51 +31,17 @@ class App extends Component {
 
     onRegister(e) {
         alert("Registration completed. Please login");
+        makeCredential()
     }
 
     onLogin(e) {
         console.log("Login")
-        this.makeCredential()
-    }
-
-    makeCredential() {
-        var challenge = new Uint8Array(32);
-        window.crypto.getRandomValues(challenge);
-
-        var userID = this.state.email;
-        var id = Uint8Array.from(window.atob(userID), c => c.charCodeAt(0))
-
-        var publicKey = {
-            'challenge': challenge,
-
-            'rp': {
-                'name': 'Example Inc.'
-            },
-
-            'user': {
-                'id': id,
-                'name': this.state.email,
-                'displayName': 'John Doe'
-            },
-
-            'pubKeyCredParams': [
-                { 'type': 'public-key', 'alg': -7 },
-                { 'type': 'public-key', 'alg': -257 }
-            ]
-        }
-
-        navigator.credentials.create({ 'publicKey': publicKey })
-            .then((newCredentialInfo) => {
-                console.log('SUCCESS', newCredentialInfo)
-            })
-            .catch((error) => {
-                console.log('FAIL', error)
-            })
+        getAssertion()
     }
 
     render() {
         return (
-            <div className="App">
+            <div className="App" >
                 <header className="App-header">
                     <p>Password-less Auth Demo</p>
                 </header>
