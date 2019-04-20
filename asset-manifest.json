@@ -1,0 +1,13 @@
+{
+  "main.css": "/passwordless/static/css/main.5c157d9f.chunk.css",
+  "main.js": "/passwordless/static/js/main.13d7f892.chunk.js",
+  "main.js.map": "/passwordless/static/js/main.13d7f892.chunk.js.map",
+  "runtime~main.js": "/passwordless/static/js/runtime~main.b8e7a119.js",
+  "runtime~main.js.map": "/passwordless/static/js/runtime~main.b8e7a119.js.map",
+  "static/js/2.e34d2fc9.chunk.js": "/passwordless/static/js/2.e34d2fc9.chunk.js",
+  "static/js/2.e34d2fc9.chunk.js.map": "/passwordless/static/js/2.e34d2fc9.chunk.js.map",
+  "index.html": "/passwordless/index.html",
+  "precache-manifest.0207d6429f4fa4fe42df058d058e7f0c.js": "/passwordless/precache-manifest.0207d6429f4fa4fe42df058d058e7f0c.js",
+  "service-worker.js": "/passwordless/service-worker.js",
+  "static/css/main.5c157d9f.chunk.css.map": "/passwordless/static/css/main.5c157d9f.chunk.css.map"
+}
